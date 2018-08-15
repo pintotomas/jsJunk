@@ -1,0 +1,32 @@
+body{
+	background-color: #aad4e2;
+
+}
+
+header{
+
+	font-family: "Helvetica", "Times New Roman", "Verdana";
+	color: #0321a5;
+	text-align: center;
+}
+
+ul.GameList{
+	list-style-type: none;
+
+}
+
+li.GameOption{
+	border: 2px solid red;
+	font-size: 25;
+	text-align: center;
+	background-color: #c2efd6;
+	width: 50
+	%;
+    margin: auto;
+    color: #006600;
+}
+
+ul.GameList a{
+	text-decoration: none;
+	color: inherit;
+}

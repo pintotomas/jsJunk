@@ -1,0 +1,66 @@
+div.game{
+	padding: 0px 0px 0px 38%;	
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  font-size: 30px;
+  text-align: center;
+  color: transparent;
+  -webkit-user-select: none;
+  width: 100px;
+}
+div#grid0{
+	border-left:none;
+	border-top: none;
+}
+
+div#grid1{
+	border-top: none;
+}
+
+div#grid2{
+	border-right: none;
+	border-top: none;
+}
+
+div#grid3{
+	border-left: none;
+}
+
+div#grid5{
+	border-right: none;
+}
+
+div#grid6{
+	border-left: none;
+	border-bottom: none;
+}
+
+div#grid7{
+	border-bottom: none;
+}
+
+div#grid8{
+	border-bottom: none;
+	border-right: none;
+}
+div.alert{
+	width: 350px;
+	display: none;
+	float:right;
+
+
+}
+
+div.container{
+	padding: 90px 0px 0px 0px;
+}
