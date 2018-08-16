@@ -3,6 +3,13 @@ var siguiente_turno = {
 	"O": "X"
 };
 
+var players = {"X":1,
+			   "O":2
+			   }
+
+player1_wins = 0
+player2_wins = 0
+
 grid = ["E","E","E","E","E","E","E","E","E"];
 turno = "X"
 
@@ -22,19 +29,29 @@ function jugar(){
 		var last_play = this.innerHTML;
 		grid[last_play] = turno;
 		this.innerHTML = turno;
-		this.style.color = "#000000";
+		document.getElementById('ponerFicha').play();
+		this.style.color = "#f4f442";
 		for (var i = 0; i < possible_wins.length; i++){
 			if (valid_position_to_check_win(last_play, i)){
 				var winner = check_win(last_play, possible_wins[i]);
 				if (winner){
+					console.log("There is a winner")
 					setTimeout(restart(turno), 500);
-					break;
+					return
 				}
+				
 			}
 		}
-
+		if (game_draw()){
+				restart("E")
+				return
+				}
 		turno = siguiente_turno[turno];
 	}
+}
+
+function game_draw(){
+	return !(grid.includes("E"))
 }
 
 function valid_position_to_check_win(position, win_to_check){
@@ -61,6 +78,22 @@ function restart(winner){
 		looser_mark.innerHTML = siguiente_turno[winner];
 		final_msg = document.getElementById("endgamenotification");
 		final_msg.style.display = "inline";
+		if (winner == "X"){
+			winner_win_count = document.getElementById("p1wins")
+			player1_wins += 1
+			win_counter = player1_wins
+		}
+		else{
+			winner_win_count = document.getElementById("p2wins")
+			player2_wins += 1
+			win_counter = player2_wins
+		}
+
+		winner_win_count.innerHTML = win_counter
+
+		
+
+
 		setTimeout(clear_cells, 1000);
 	}
 	else{

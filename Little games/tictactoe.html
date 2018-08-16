@@ -2,28 +2,37 @@
 <html>
 <head>
 	<link href="styles/main.css" rel="stylesheet" type="text/css"/>
-	<link href="styles/tictactoe.css" rel="stylesheet" type="text/css"/>
 	</style>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link href="styles/tictactoe.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 	<header>
-		<h1>Tic-Tac-Toe!</h1>	
+		<h1 style="color:#50f442">Tic-Tac-Toe!</h1>	
 	</header>
 	<main>
 
-
-
+	<div class="info-container">
+		<div class="infoJuego">
+			<h3 style="color:cyan"> Game Information</h3> <br>
+			<p style="color: red;font-size: 115%">
+			Player 1 (X) total wins: <span id = "p1wins">0</span> <br><br>
+			Player 2 (O) total wins: <span id = "p2wins">0</span>
+			</p>
+			<br><br>
+		</div>
+	</div>
 	<div class="game">
-
+		
 		<div class="grid-container">
-
-	  		<div class="grid-item" id = "grid0">0</div>
+			<audio src="tictactoe_ficha.mp3" id="ponerFicha"></audio>
+	  		<div class="grid-item" id = "grid0">0 </div>
 	  		<div class="grid-item" id = "grid1">1</div>
 	  		<div class="grid-item" id = "grid2">2</div>
 	  		<div class="grid-item" id = "grid3">3</div>

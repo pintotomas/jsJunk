@@ -1,3 +1,7 @@
+body{
+	background-color: black;
+}
+
 div.game{
 	padding: 0px 0px 0px 38%;	
 }
@@ -5,18 +9,19 @@ div.game{
 .grid-container {
   display: inline-grid;
   grid-template-columns: auto auto auto;
-  background-color: white;
+  background-color: transparent;
   padding: 10px;
 }
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: transparent;
+  border: 1px solid red;
   padding: 40px;
   font-size: 30px;
   text-align: center;
   color: transparent;
   -webkit-user-select: none;
   width: 100px;
+
 }
 div#grid0{
 	border-left:none;
@@ -63,4 +68,18 @@ div.alert{
 
 div.container{
 	padding: 90px 0px 0px 0px;
+}
+
+div.infoJuego{
+	width: 25%;
+	padding-left: 5%;
+	float:left;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+
+}
+
+div.info-container{
+	padding-left: 5%;
+
 }
