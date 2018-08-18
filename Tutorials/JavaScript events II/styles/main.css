@@ -1,0 +1,36 @@
+header{
+	text-align: center;
+	color: grey;
+}
+
+
+ul#MyOrders{
+	align-content: center;
+	padding-left: 35%;
+}
+
+body{
+	font-family: "helvetica neue";
+	color: #666;
+	padding: 0 20%;
+}
+
+
+input{
+	color:default;
+	font-weight: bolder;
+	border: none;
+}
+
+li input{
+	display: none;
+}
+
+li.edit span{
+	display: none;
+}
+
+
+li.edit input{
+	display:initial;
+}

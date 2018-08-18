@@ -1,0 +1,23 @@
+header{
+	background:#c0c8d3;
+	text-align: center;
+}
+
+h1#title{
+	padding: 4%;
+}
+
+div.container-button{
+	padding: 1%;
+}
+
+div.container{
+	padding: 90px;
+	padding-right:25px;
+
+}
+
+div.panel{
+	width: 20%;
+	float:left;
+}

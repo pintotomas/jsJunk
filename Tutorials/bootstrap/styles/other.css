@@ -1,0 +1,24 @@
+p#main{
+	color:green;
+}
+
+.primary{
+	color:grey;
+}
+
+p.primary.other{
+	color:cyan;
+}
+
+p.primary{
+	color:red;
+	font-size: 400%;
+}
+p{
+	color:blue;
+}
+
+p.test{
+	color:grey;
+	font-size: 400%;
+}

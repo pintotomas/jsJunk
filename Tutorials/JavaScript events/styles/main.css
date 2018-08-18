@@ -1,0 +1,12 @@
+header{
+	text-align: center;
+	color: grey;
+}
+
+p#sumBox{
+	text-align: center;
+}
+
+.hide{
+	display: none;
+}

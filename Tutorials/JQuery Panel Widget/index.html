@@ -1,0 +1,140 @@
+<!doctpy html>
+<html>
+	<head>
+		<title>JQuery Panel Widget</title>
+		</style>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+		<link href="styles/main.css" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<main>
+		<div class="tab-panels">
+			<ul class="tabs">
+				<li rel="panel1" class="active">panel1</li>
+				<li rel="panel2">panel2</li>
+				<li rel="panel3">panel3</li>
+				<li rel="panel4">panel4</li>
+			</ul>
+		
+			<div id="panel1" class="panel active">
+				content1<br/>
+				content1<br/>
+				content1<br/>
+				content1<br/>
+				content1<br/>
+			</div>
+		
+			<div id="panel2" class="panel">
+				content2<br/>
+				content2<br/>
+				content2<br/>
+				content2<br/>
+				content2<br/>
+			</div>
+
+			<div id="panel3" class="panel">
+				content3<br/>
+				content3<br/>
+				content3<br/>
+				content3<br/>
+				content3<br/>
+			</div>
+
+			<div id="panel4" class="panel">
+				content4<br/>
+				content4<br/>
+				content4<br/>
+				content4<br/>
+				content4<br/>
+			</div>
+		
+
+		</div>
+
+		<div class="tab-panels">
+			<ul class="tabs">
+				<li rel="panel5" class="active">panel1</li>
+				<li rel="panel6">panel2</li>
+				<li rel="panel7">panel3</li>
+				<li rel="panel8">panel4</li>
+			</ul>
+		
+			<div id="panel5" class="panel active">
+				content1<br/>
+				content1<br/>
+				content1<br/>
+				content1<br/>
+				content1<br/>
+			</div>
+		
+			<div id="panel6" class="panel">
+				content2<br/>
+				content2<br/>
+				content2<br/>
+				content2<br/>
+				content2<br/>
+			</div>
+
+			<div id="panel7" class="panel">
+				content3<br/>
+				content3<br/>
+				content3<br/>
+				content3<br/>
+				content3<br/>
+			</div>
+
+			<div id="panel8" class="panel">
+				content4<br/>
+				content4<br/>
+				content4<br/>
+				content4<br/>
+				content4<br/>
+			</div>
+		
+
+		</div>
+
+	</main>
+
+
+<script src="bower_components/jquery/jquery.js"></script>
+
+<script>
+
+	$(document).ready(function(){
+		$(function(){
+			$('.tab-panels .tabs li').on('click',function(){
+				var $panel = $(this).closest('.tab-panels')
+				$panel.find('.tabs li.active').removeClass('active')
+				$(this).addClass('active')
+				//Remove active class
+
+				//figure out which pannel to show
+				var panelToShow = $(this).attr('rel')
+
+				//hide current panel
+				//anything in Jquery can add a function after a function (CallBack)
+				$panel.find('.panel.active').slideUp(300, showNextPanel)
+
+				 function showNextPanel(){
+					//'this' points to the actual panel active
+					$(this).removeClass('active')
+					$('#'+panelToShow).slideDown(300,function(){
+						//Slide down the new one and add the active class
+						$(this).addClass('active');
+					});
+				}
+				//show new panel
+
+			})
+		})
+	})
+
+</script>
+</html>

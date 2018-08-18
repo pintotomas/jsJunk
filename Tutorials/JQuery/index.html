@@ -1,0 +1,76 @@
+<!doctpy html>
+<html>
+	<head>
+		<title>JQuery</title>
+		</style>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+		<link href="styles/main.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<main>
+		<header>
+			<h1 id="title">Lets Have Fun!</h1>
+			<div class="container-button">
+				<button type="button" class="panel-btn" data-panelid="panel1">Primary</button>
+				<button type="button" class="panel-btn btn-secondary"data-panelid="panel2">Secondary</button>
+				<button type="button" class="panel-btn btn-success"  data-panelid="panel3">Success</button>
+				<button type="button" class="panel-btn btn-success"  data-panelid="panel4">Success</button>
+			</div>
+		</header>
+		<div class="container">
+			<div class="panel panel-primary" id="panel1">  
+				<div class="panel-body">Panel content</div>
+  				<div class="panel-footer">Panel footer</div>
+  			</div>
+  			
+			<div class="panel panel-success" id="panel2">				
+				<div class="panel-body">Panel content</div>
+  				<div class="panel-footer">Panel footer</div>
+  			</div>
+
+			<div class="panel panel-info" id="panel3">				
+				<div class="panel-body">Panel content</div>
+  				<div class="panel-footer">Panel footer</div>
+  			</div>
+			<div class="panel panel-warning" id="panel4">				
+				<div class="panel-body">Panel content</div>
+  				<div class="panel-footer">Panel footer</div>
+  			</div>
+			</div>
+		</main>
+	</head>
+<script src="bower_components/jquery/jquery.js"></script>
+
+<script>
+	
+	/* Bad way
+	$(document).ready(function(){
+		$('#btn1').html('my button');
+		$('#panel1').css({color:'red', fontWeight:'bold', 'font-weight':'bold'})
+		$('#panel1').hide(300).show(1000).slideUp(1000).delay(1000).slideDown(1000).fadeToggle(5000).fadeToggle(2500).toggle(500).toggle(500).toggle(500).toggle(500);
+		$('#panel2').slideUp(2000)
+		$("#panel3").html('<strong> my bolt</strong>');
+		$('#btn1').on('click', function() {
+			$('#panel3').slideToggle(250)
+		})
+		$('#btn2').on('click', function() {
+			$('#panel4 .panel-body').html('my new pannel content');
+		})
+	});
+	*/
+	$(document).ready(function(){
+		$('.panel-btn').on('click', function(){
+			var panelId= $(this).attr('data-panelid');
+			console.log(panelId);
+			$('#'+panelId).toggle();
+			$('#'+panelId+' .panel-body').html('JQUERY IS AWESOME!');
+		});
+	})
+
+</script>
+</html>
